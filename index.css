@@ -1,0 +1,171 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  ---dark-blue: hsl(223, 47%, 23%);
+  --main-font: 'Red Hat Display';
+  --purple: #8277F8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  text-transform: none;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--main-font), sans-serif;
+}
+
+body {
+  display: flex;
+  position: relative;
+  background-color: var(--pale-blue);
+  min-height: 100vh;
+}
+
+body > img {
+  position: absolute;
+}
+
+#back-img-desktop {
+  width: 100%;
+  display: none;
+}
+
+#back-img-mobile {
+  display: inline-block;
+}
+
+span, p {
+  font-size: 1.6rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  padding: 0 0 20px 0;
+  -webkit-appearance: button;
+}
+
+p {
+  color: var(--desaturated-blue);
+  text-align: center;
+  margin: 0 auto;
+  line-height: 26px;
+}
+
+main {
+  position: relative;
+  margin: auto;
+  background-color: white;
+  width: 80%;
+  max-width: 340px;
+  border-radius: 20px;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  background-image: url("./images/illustration-hero.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+section {
+  padding: 20px;
+  height: 100%;
+}
+
+#price-tag {
+  margin: 20px 0;
+  position: relative;
+  background-color: var(--very-pale-blue);
+  display: block;
+  height: 65px;
+  border-radius: 10px;
+}
+
+#price-tag > #avatar {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#price-tag > h4 {
+  font-size: 1.4em;
+  position: absolute;
+  left: 50%;
+  top:  10px;
+  transform: translateX(-50%);
+}
+
+#price-tag > a {
+  font-size: 1.3em;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#price-tag > p {
+  font-size: 1.4em;
+  position: absolute;
+  left: 50%;
+  bottom:  10px;
+  transform: translateX(-50%);
+}
+
+#cancel-order {
+  display: block
+}
+
+#proceed-payment {
+  box-shadow: 0 16px 48px -5px var(--purple);
+  border-radius: 12px;
+  background-color: var(--bright-blue);
+  color: white;
+  width: 100%;
+  height: 50px;
+  font-family: var(--main-font);
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#proceed-payment:hover {
+  background-color: var(--purple);
+}
+
+#cancel-order {
+  display: block;
+  color: var(--desaturated-blue);
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4em;
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 450px) {
+  #back-img-desktop {
+    display: inline-block;
+  }
+  #back-img-mobile {
+    display: none;
+  }
+}
+
