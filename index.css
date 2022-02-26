@@ -105,7 +105,7 @@ section {
   transform: translateY(-50%);
 }
 
-#price-tag > h4 {
+#price-tag > h2 {
   font-size: 1.4em;
   position: absolute;
   left: 50%;
